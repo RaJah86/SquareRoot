@@ -8,16 +8,48 @@ namespace SquareRoot
 {
     class Program
     {
+        public class SquareRootcalculater
+        { }
         static void Main(string[] args)
         {
-            double a, b, c;
             Console.OutputEncoding = Encoding.GetEncoding(1251);
+
+
+
+
+            double a;
             Console.Write("Введите коэфициент A: ");
-            a = double.Parse(Console.ReadLine());
-            Console.Write("Введите коэфициент B: ");
-            b = double.Parse(Console.ReadLine());
-            Console.Write("Введите коэфициент C: ");
-            c = double.Parse(Console.ReadLine());
+            string strA = Console.ReadLine();
+            bool resA = double.TryParse(strA, out a);
+            if (resA != true)
+            {
+                Console.WriteLine("xuy");
+                Console.ReadKey();
+                return;
+            }
+
+            double b;
+            Console.Write("Введите коэфициент B:");
+            string strB = Console.ReadLine();
+            bool resB = double.TryParse(strB, out b);
+            if (resB != true)
+            {
+                Console.WriteLine("пиши цифры");
+                Console.ReadKey();
+                return;
+            }
+
+            double c;
+            Console.Write("введите коэфицент С:");
+            string strC = Console.ReadLine();
+            bool resC = double.TryParse(strC, out c);
+            if (resC != true)
+            {
+                Console.WriteLine("цифры нада");
+                Console.ReadKey();
+                return;
+            }
+
 
             double D;
             D = b * b - 4 * a * c;
@@ -44,6 +76,7 @@ namespace SquareRoot
 
 
             Console.ReadKey();
+
         }
     }
 }
