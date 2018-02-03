@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareRoot", "SquareRoot\Sq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareRootLib", "SquareRootLib\SquareRootLib.csproj", "{BC842F9C-5432-4477-B074-DF8374F2720C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareRootTests", "SquareRootTests\SquareRootTests.csproj", "{D0A6575E-659F-4B44-B5E8-4E5B753CBBE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BC842F9C-5432-4477-B074-DF8374F2720C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC842F9C-5432-4477-B074-DF8374F2720C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC842F9C-5432-4477-B074-DF8374F2720C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A6575E-659F-4B44-B5E8-4E5B753CBBE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A6575E-659F-4B44-B5E8-4E5B753CBBE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A6575E-659F-4B44-B5E8-4E5B753CBBE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A6575E-659F-4B44-B5E8-4E5B753CBBE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
