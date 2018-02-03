@@ -9,26 +9,31 @@ namespace SquareRoot
     class Program
     {
         public class SquareRootcalculater
-        { }
+        {
+
+        }
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.GetEncoding(1251);
+            double a, b, c;
 
-
-
-
-            double a;
             Console.Write("Введите коэфициент A: ");
             string strA = Console.ReadLine();
             bool resA = double.TryParse(strA, out a);
             if (resA != true)
             {
-                Console.WriteLine("xuy");
+                Console.WriteLine("не то");
                 Console.ReadKey();
                 return;
             }
 
-            double b;
+            if (a == 0)
+            {
+                Console.WriteLine("Уравнение не является квадратным");
+                Console.ReadKey();
+                return;
+            }
+
             Console.Write("Введите коэфициент B:");
             string strB = Console.ReadLine();
             bool resB = double.TryParse(strB, out b);
@@ -38,8 +43,9 @@ namespace SquareRoot
                 Console.ReadKey();
                 return;
             }
+            
 
-            double c;
+
             Console.Write("введите коэфицент С:");
             string strC = Console.ReadLine();
             bool resC = double.TryParse(strC, out c);
@@ -50,6 +56,40 @@ namespace SquareRoot
                 return;
             }
 
+            double x1, x2;
+
+           
+
+            if (b == 0)
+            {
+                Console.WriteLine("Квадратное уравнение является не полным");
+                if (-(c / a) > 0)
+                {
+                    x1 = Math.Sqrt(-c / a);
+                    x2 = -Math.Sqrt(-c / a);
+                }
+                else
+                {
+                    Console.WriteLine("нет решения");
+                    Console.ReadLine();
+                    return;
+                }
+            }
+
+             if(c == 0)
+            {
+                Console.WriteLine("Уравнение является не полным");
+                x1 = 0;
+                x2 = -(b / a);
+                Console.WriteLine($"X1 = {x1}, X2 = {x2}");
+                Console.ReadKey();
+                return;
+            }
+
+            else
+            {
+                Console.WriteLine("Дискриминант не вычесляется");
+            }
 
             double D;
             D = b * b - 4 * a * c;
@@ -57,7 +97,6 @@ namespace SquareRoot
 
             if (D > 0)
             {
-                double x1, x2;
 
                 x1 = (-b - Math.Sqrt(D)) / (2 * a);
                 x2 = (-b + Math.Sqrt(D)) / (2 * a);
@@ -67,16 +106,15 @@ namespace SquareRoot
             {
                 double x;
                 x = -b / (2 * a);
-                Console.Write($"Квадратное уравнение имеет один корень x = {x}");
+                Console.WriteLine($"Квадратное уравнение имеет один корень x = {x}");
             }
             else
             {
-                Console.Write("Квадратное уравнение не имеет корней");
+                Console.WriteLine("Квадратное уравнение не имеет корней");
             }
 
-
             Console.ReadKey();
-
+            
         }
     }
 }
